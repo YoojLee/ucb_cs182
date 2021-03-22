@@ -1,5 +1,5 @@
 # UCB CS182
-yujin's UCB CS 182 studying log🤓
+yujin's UCB CS182 studying log🤓
 
 
 <br>
