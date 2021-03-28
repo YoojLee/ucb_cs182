@@ -1,4 +1,4 @@
-# Lecture 2.
+# Lecture 2
 
 There are different types of learning problems such as supervised learning, unsupervised learning and reinforcement learning and so on.
 
@@ -20,8 +20,7 @@ generalized supervised learning. (지도학습은 Y를 매칭하는 f를 찾는�
 
 
 
-<br>
-</br>
+
 ## Supervised Learning
 
 라벨 값이 존재하는 데이터, 데이터를 기반으로 라벨을 추론함.  
@@ -45,8 +44,9 @@ Till now, supervised learning에서의 task가 확률값을 예측하는 것이�
 → 이는 결국 **loss function의 정의와 optimizer의 선택**으로 이어지는 것임.
 
 
-<br>
-</br>
+
+
+
 ## Loss functions
 
 데이터셋 D에서 각 인스턴스는 iid라고 가정함 (independent and identically distributed). 즉, 각 인스턴스는 독립적이지만 각각 같은 확률분포를 갖는다.
@@ -66,8 +66,6 @@ $p(x_i, y_i) = p(x_i)*p(y_i|x_i)$
 
 
 
-<br>
-</br>
 ## Optimization
 
 지금까지 무엇을 기준으로 $\theta$ 가 학습이 되는지에 대해서 알아보았고(loss func),  
