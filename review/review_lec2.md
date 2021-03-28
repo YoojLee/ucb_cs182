@@ -9,20 +9,19 @@ In supervised learning, It matters that how we represent $f_\theta(x)$, how we m
 ### Unsupervised learning
 - generative modeling: GANs, VAEs, pixel RNN, etc.
 - self-supervised representation learning  
-  (Text)
-  → BERT  
 
-  (Image)
-  →
 
 ### Reinforcement Learning
 generalized supervised learning. (지도학습은 Y를 매칭하는 f를 찾는거고, 강화학습은 그냥 reward를 최대화하는 건데 정답에 가까워지는 걸 reward로 정의할 수 있으니까)
 
-![img](https://www.kdnuggets.com/2018/03/5-things-reinforcement-learning.html)
+![img](https://www.kdnuggets.com/images/reinforcement-learning-fig1-700.jpg)
 
 많은 분야로 확장 가능. 로봇이나, ad placement나, recommendation system 같은 것들.
 
 
+
+<br>
+<br>
 ## Supervised Learning
 
 라벨 값이 존재하는 데이터, 데이터를 기반으로 라벨을 추론함.  
@@ -46,6 +45,8 @@ Till now, supervised learning에서의 task가 확률값을 예측하는 것이�
 → 이는 결국 **loss function의 정의와 optimizer의 선택**으로 이어지는 것임.
 
 
+<br>
+<br>
 ## Loss functions
 
 데이터셋 D에서 각 인스턴스는 iid라고 가정함 (independent and identically distributed). 즉, 각 인스턴스는 독립적이지만 각각 같은 확률분포를 갖는다.
@@ -64,19 +65,24 @@ $p(x_i, y_i) = p(x_i)*p(y_i|x_i)$
 결론: 우리가 흔히 사용하는 loss function은 NLL, zero-one loss, MSE, cross entropy 등이 있다. 이때 NLL = croos entropy (이때는 label의 분포가 discrete하다고 가정), MSE = NLL (regression의 경우) 이다.
 
 
+
+<br>
+<br>
 ## Optimization
 
 지금까지 무엇을 기준으로 $\theta$ 가 학습이 되는지에 대해서 알아보았고(loss func),  
 앞으로는 그래서 **어떤 방식으로** $\theta$를 업데이트할 것인가에 대해 알아볼 것이다.
 → Optimizer 선택  
 
+
+<br>
 ### Gradient Descent
 
 Loss Function이 어느 theta에서 가장 작은값을 갖는가의 문제로 귀결됨. 즉, 최적화 문제 중 최소화 문제임.
 
 즉 미분값이 0이 되는 값을 찾으면 되는데, loss function이 복잡해지고 파라미터 스페이스가 커질 수록 함수의 최적화를 완벽하게 찾아내는 것은 불가능함. 따라서 반복적으로 계산을 수행해가며 값을 최소화하는 $\theta$값을 찾아야함.
 
-이러한 방식 중 하나가 **Gradient Descent**이며, Gradient는 편미분 벡터이며, Descent란 Loss Function 평면 위에서 계속 내려가면서 최저점을 찾는다는 것 정도로 이해ㅏㅎㄹ 수 있음.
+이러한 방식 중 하나가 **Gradient Descent**이며, Gradient는 편미분 벡터이며, Descent란 Loss Function 평면 위에서 계속 내려가면서 최저점을 찾는다는 것 정도로 이해할 수 있음.
 
 수식적으로 표현하면,
 
@@ -84,5 +90,6 @@ Loss Function이 어느 theta에서 가장 작은값을 갖는가의 문제로 �
 2. $\theta ← \theta - \alpha\nabla_\thetaL(\theta)$
 
 
+<br>
 #### Logistic Regression
 logreg의 경우, 조건부확률 $p(y|x)$는 softmax로 정의되며, loss function은 cross entropy 혹은 nll로 정의된다. 하지만 클래스가 2개밖에 없는 binary classification의 경우에는 조건부확률을 softmax로 정의하는 것은 redundancy가 발생하므로, softmax가 아닌 sigmoid함수를 사용한다.
