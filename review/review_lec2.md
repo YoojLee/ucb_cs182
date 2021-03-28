@@ -21,7 +21,7 @@ generalized supervised learning. (지도학습은 Y를 매칭하는 f를 찾는�
 
 
 <br>
-<br>
+</br>
 ## Supervised Learning
 
 라벨 값이 존재하는 데이터, 데이터를 기반으로 라벨을 추론함.  
@@ -46,7 +46,7 @@ Till now, supervised learning에서의 task가 확률값을 예측하는 것이�
 
 
 <br>
-<br>
+</br>
 ## Loss functions
 
 데이터셋 D에서 각 인스턴스는 iid라고 가정함 (independent and identically distributed). 즉, 각 인스턴스는 독립적이지만 각각 같은 확률분포를 갖는다.
@@ -67,7 +67,7 @@ $p(x_i, y_i) = p(x_i)*p(y_i|x_i)$
 
 
 <br>
-<br>
+</br>
 ## Optimization
 
 지금까지 무엇을 기준으로 $\theta$ 가 학습이 되는지에 대해서 알아보았고(loss func),  
@@ -75,7 +75,7 @@ $p(x_i, y_i) = p(x_i)*p(y_i|x_i)$
 → Optimizer 선택  
 
 
-<br>
+
 ### Gradient Descent
 
 Loss Function이 어느 theta에서 가장 작은값을 갖는가의 문제로 귀결됨. 즉, 최적화 문제 중 최소화 문제임.
@@ -90,6 +90,6 @@ Loss Function이 어느 theta에서 가장 작은값을 갖는가의 문제로 �
 2. $\theta ← \theta - \alpha\nabla_\thetaL(\theta)$
 
 
-<br>
+
 #### Logistic Regression
-logreg의 경우, 조건부확률 $p(y|x)$는 softmax로 정의되며, loss function은 cross entropy 혹은 nll로 정의된다. 하지만 클래스가 2개밖에 없는 binary classification의 경우에는 조건부확률을 softmax로 정의하는 것은 redundancy가 발생하므로, softmax가 아닌 sigmoid함수를 사용한다.
+logistic regression의 경우, 조건부확률 $p(y|x)$는 softmax로 정의되며, loss function은 cross entropy 혹은 nll로 정의된다. 하지만 클래스가 2개밖에 없는 binary classification의 경우에는 조건부확률을 softmax로 정의하는 것은 redundancy가 발생하므로, softmax가 아닌 sigmoid함수를 사용한다.
