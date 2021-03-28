@@ -9,7 +9,7 @@ yujin's UCB CS182 studying log🤓
 | Lecture | Summary | Discussions |
 |:-------:|:-------:|:-------:|
 | Lec1 | ✔ | ✔ |
-| Lec2 |   |   |
+| Lec2 | ✔ |   |
 | Lec3 |   |   |
 | Lec4 |   |   |
 | Lec5 |   |   |
